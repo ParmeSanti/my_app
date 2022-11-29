@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
-import { Article } from './article'; 
+import { Article } from './article';
 
 
 const httpOptions = {
-  headers: new HttpHeaders({'Content-Type': 'application/json'})
+  headers: new HttpHeaders({'Content-Type': 'application/json'}) 
 }
 const apiUrl = 'http://localhost:3000/api/article';
 
@@ -20,7 +20,7 @@ export class ApiService {
   getArticles(): Observable<Article[]> {
     return this.http.get<Article[]>(apiUrl)
       .pipe(
-        tap(article => console.log('fetched articles')),
+        tap(article => console.log('fetched articles ' + article)),
         catchError(this.handleError('getArticles', []))
       );
   }

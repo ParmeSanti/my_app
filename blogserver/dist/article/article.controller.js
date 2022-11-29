@@ -21,7 +21,6 @@ let ArticleController = class ArticleController {
         this.articleService = articleService;
     }
     async create(articleDto) {
-        console.log(articleDto);
         return this.articleService.create(articleDto);
     }
     async findAll() {
