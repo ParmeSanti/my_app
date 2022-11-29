@@ -14,9 +14,9 @@ import { Article } from './interface/article.interface';
 @Controller('article')
 export class ArticleController {
   constructor(private readonly articleService: ArticleService) {}
+
   @Post()
   async create(@Body() articleDto: ArticleDTO) {
-    console.log(articleDto);
     return this.articleService.create(articleDto);
   }
   @Get()
