@@ -16,6 +16,7 @@ export class ArticlesComponent implements OnInit {
   constructor(private api:ApiService) { }
 
   ngOnInit(): void {
+    console.log("test");
     this.api.getArticles()
     .subscribe((res:any) => {
       this.data = res;
