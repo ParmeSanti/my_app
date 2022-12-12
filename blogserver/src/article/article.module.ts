@@ -4,8 +4,8 @@ import { ArticleService } from './article.service';
 import { articleProviders } from './article.provider';
 import { DatabaseModule } from '../database/database.module';
 @Module({
-  imports: [DatabaseModule],
-  controllers: [ArticleController],
-  providers: [ArticleService, ...articleProviders],
+    imports: [DatabaseModule],
+    controllers: [ArticleController],
+    providers: [ArticleService, ...articleProviders],
 })
-export class ArticleModule {}
+export class ArticleModule { }

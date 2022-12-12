@@ -17,7 +17,7 @@ const routes: Routes = [
     data: {title : 'Artikel hinzufügen'}
   },
   {
-    path:'details-article',
+    path:'details-article/:id',
     component: DetailsArticleComponent,
     data: {title : 'Artikel ansehen'}
   },
